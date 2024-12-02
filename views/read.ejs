@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/" style="text-decoration: none; color: green;">Back to home</a>
+    <h3 style="padding-left: 40px; font-size: 5vh;">All users</h3>
+
+    <div class="main" style="display: flex; gap: 20px; flex-wrap: wrap; display: flex; align-items: center; padding: 30px;">
+        <% users.forEach(user => { %>
+            <div class="users" style="background-color: rgb(42, 42, 42); height: 169px; width: 150px; border-radius: 5px;">
+                <div class="profile" style="height: 100px; width: 150px; border-radius: 5px; overflow: hidden;">
+                    <img src="<%= user.image %>" alt="Profile Image" style="height: 100%; width: 100%; object-fit: cover; background-position: center;">
+                </div>
+                <h4 style="color: rgb(206, 205, 205); padding-left: 10px; font-size: 2.3vh; margin: 0; white-space: nowrap;">Name: <%= user.name %></h4>
+                <h4 style="color: rgb(188, 188, 188); padding-left: 10px; font-size: 2vh; margin-top: 4px; white-space: nowrap;">Email: <%= user.email %></h4>
+
+                <div class="option" style="display: flex;">
+                    <a href="/edit/<%= user._id %>" style="color: rgb(4, 184, 255); padding-left: 10px; font-size: 1.7vh; margin: 0; text-decoration: none; white-space: nowrap;">Edit profile</a>
+                    <a href="/delete/<%= user._id %>" style="color: rgb(255, 0, 0); padding-left: 10px; font-size: 1.7vh; margin: 0; text-decoration: none; white-space: nowrap;">Delete profile</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

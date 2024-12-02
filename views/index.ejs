@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/read" style="text-decoration: none; color: green;">Read users..</a>
+    <form style="display: flex; justify-content: center; align-items: center;" action="/create" method="post">
+        <input type="text" name="name" placeholder="Enter name" required>
+        <input type="text" name="email" placeholder="Enter email" required>
+        <input type="text" name="image" placeholder="Enter profile picture URL" required>
+        <button type="submit">Create user</button>
+    </form>
+
+    <div class="nodata" hidden>
+        <h1>No data found</h1>
+    </div>
+</body>
+</html>
